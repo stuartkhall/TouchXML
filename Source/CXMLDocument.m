@@ -53,11 +53,11 @@
         #if TOUCHXMLUSETIDY
         if (inOptions & CXMLDocumentTidyHTML)
             {
-            inString = [[CTidy tidy] tidyString:inString inputFormat:TidyFormat_HTML outputFormat:TidyFormat_XHTML diagnostics:NULL error:&theError];
+                inString = [[CTidy tidy] tidyString:inString inputFormat:TidyFormat_HTML outputFormat:TidyFormat_XHTML encoding:"utf8" diagnostics:NULL error:&theError];
             }
         else if (inOptions & CXMLDocumentTidyXML)
             {
-            inString = [[CTidy tidy] tidyString:inString inputFormat:TidyFormat_XML outputFormat:TidyFormat_XML diagnostics:NULL error:&theError];
+                inString = [[CTidy tidy] tidyString:inString inputFormat:TidyFormat_XML outputFormat:TidyFormat_XML encoding:"utf8" diagnostics:NULL error:&theError];
             }
         #endif
         
@@ -109,11 +109,11 @@
         #if TOUCHXMLUSETIDY
         if (inOptions & CXMLDocumentTidyHTML)
             {
-            inData = [[CTidy tidy] tidyData:inData inputFormat:TidyFormat_HTML outputFormat:TidyFormat_XHTML diagnostics:NULL error:&theError];
+                inData = [[CTidy tidy] tidyData:inData inputFormat:TidyFormat_HTML outputFormat:TidyFormat_XHTML encoding:"utf8" diagnostics:NULL error:&theError];
             }
         else if (inOptions & CXMLDocumentTidyXML)
             {
-            inData = [[CTidy tidy] tidyData:inData inputFormat:TidyFormat_XML outputFormat:TidyFormat_XML diagnostics:NULL error:&theError];
+            inData = [[CTidy tidy] tidyData:inData inputFormat:TidyFormat_XML outputFormat:TidyFormat_XML encoding:"utf8" diagnostics:NULL error:&theError];
             }
         #endif
         
